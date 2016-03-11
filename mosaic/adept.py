@@ -133,7 +133,7 @@ class adept(metaEventProcessor.metaEventProcessor):
 				edat=self.dataPolarity*np.asarray( self.eventData,  dtype='float64' )
 
 				# estimate initial guess for events
-				initguess=self._cusumInitGuess(edat)
+				initguess=self._cusumInitGuess(self.eventData)
 				
 				# Fit the system transfer function to the event data
 				# if sys.platform.startswith('win'):
